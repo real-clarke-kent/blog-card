@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogCard from "../components/BlogCard.astro";
+import Badge from "../components/Badge.astro";
+import thumbnail from "../assets/spacejoy.jpg";
+
+import "../styles/base.css";
+---
+
+<Layout title="Testimonial Card">
+  <main
+    class="flex min-h-dvh flex-col items-center gap-6 bg-secondary pt-[120px]"
+  >
+    <BlogCard loading="eager" image={thumbnail}>
+      <Fragment slot="header">
+        <Badge variant="success">Interior</Badge>
+      </Fragment>
+
+      <Fragment slot="header">
+        <h1 class="overflow-hidden text-ellipsis text-nowrap">
+          Top 5 Living Room Inspirations
+        </h1>
+      </Fragment>
+
+      <Fragment>
+        Curated vibrants colors for your living, make it pop & calm in the same
+        time.
+      </Fragment>
+    </BlogCard>
+  </main>
+</Layout>
+
+<style>
+  main {
+    --Linear-Page: linear-gradient(148deg, #f9fafb 8.89%, #d2d6db 100.48%);
+    background: var(
+      --Linear-Page,
+      linear-gradient(148deg, #f9fafb 8.89%, #d2d6db 100.48%)
+    );
+  }
+</style>

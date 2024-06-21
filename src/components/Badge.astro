@@ -1,0 +1,17 @@
+---
+import { clsx } from "clsx/lite";
+
+type Props = {
+  variant: "success";
+};
+
+const { variant } = Astro.props;
+const classes = clsx(
+  "text-sm border rounded-full py-0.5 px-2 w-fit",
+  variant === "success" && "text-success border-success bg-success-subtle",
+);
+---
+
+<span class={classes}>
+  <slot />
+</span>

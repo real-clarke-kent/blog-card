@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-lg leading-7 text-primary;
+  }
+
+  p {
+    @apply text-base text-secondary;
+  }
+}
